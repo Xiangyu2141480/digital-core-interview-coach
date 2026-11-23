@@ -1,0 +1,4 @@
+interface:
+  display_name: "数字核心咨询群面教练"
+  short_description: "用工程交付经历讲清商业取舍，练习真实案例、中英文群面与压力追问"
+  default_prompt: "用 $coach-digital-core-interviews 开始一场埃森哲数字核心中文模拟群面，每轮只出一道题。"

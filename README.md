@@ -1,2 +1,53 @@
-# digital-core-interview-coach
-双语数字化咨询群面教练 · A bilingual Agent Skill for case interviews, evidence-based decisions and group practice.
+# Digital Core Interview Coach · 数字核心咨询群面教练
+
+用一段案例、一位持不同意见的队友和一次条件变化，练习如何向客户作出能被追问的建议。面向数字化转型咨询群面，包含埃森哲中国 AAP 数字核心的公开资料。中文与英文均可使用。
+
+## 三种用法
+
+| 什么时候 | 直接输入 | 你要做的事 |
+|---|---|---|
+| 面试前，练 10 分钟 | “盲练。给我一个陌生行业，让财务和一线各持一条不同的信息。我先发言，你再追问。” | 先说今天选什么和缺哪条事实。问到哪个角色就听哪个角色的证据，再决定是否改判。 |
+| 群面中，需要接话 | “接话。题干：……。队友原话：……。还剩 20 秒，给我两句。” | 准确复述队友的分母和假设，加一条能改变选择的证据。现场按本场说明使用 AI。 |
+| 一轮结束，查自己的弱点 | “复盘。这是我刚才的原话：……。哪一句对团队决定有影响？改一句，再换行业让我答。” | 留下第一次和重答的原话，比较哪一次讲清了核验结果如何改变决策。隔天只给新题，不看示范。 |
+
+## 开始使用
+
+已经安装个人版时，在对话里说“用数字核心群面教练，盲练一次”。初次使用开源版时，在支持 Agent Skills 的客户端导入 [完整技能目录](skills/coach-digital-core-interviews)。使用 skills CLI 的读者可直接从本仓库安装：
+
+```sh
+npx skills add Xiangyu2141480/digital-core-interview-coach --skill coach-digital-core-interviews
+```
+
+然后说：“用 $coach-digital-core-interviews 开始盲练。我先给判断，等我问你再揭示新事实。” 实际客户端的安装选项见 [skills CLI](https://github.com/vercel-labs/skills)。
+
+想按自己的履历训练，可在自己的私有对话中给三句话：“我亲自做过……；能核实的交付或采用证据是……；还没有测过……。” 之后让教练扮演财务或业务负责人深挖。仓库中的训练可以直接使用虚构的候选人背景。
+
+## 素材
+
+- [案例拆解与技术选型](skills/coach-digital-core-interviews/references/decisions.md)覆盖七类业务问题、九项能力和财务口径。
+- [五场原创群面](skills/coach-digital-core-interviews/references/cases.md)包括制造交付、客服自动化、ERP 迁移、会员券和政务预约。作为候选人练盲题时，请让模型读教练材料并逐轮揭示。
+- [追问与话术](skills/coach-digital-core-interviews/references/drills.md)覆盖投资回报、数据质量、团队分歧、压力汇报、经历和 AI 使用。
+- [研究与来源](skills/coach-digital-core-interviews/references/research.md)收录岗位说明、四份往届候选人自述、两项客户案例、原始方法资料和三个公开项目设计参考。真实面试安排取自当场通知。
+- [七个真实现场决策](skills/coach-digital-core-interviews/references/field-cases.md)包括海尔海外订单、星展风险分类、UPS 导航、Zillow 收缩业务、客服助手现场研究、eBay 广告实验和公共服务热线。每例记录证据范围与一条跨行业追问。
+- [实施、停投与长期效果](skills/coach-digital-core-interviews/references/implementation-cases.md)新增七例，覆盖工业制造、数字平台退出、ERP 上线、公共项目审计，以及管理实践与 AI 的现场实验。
+- [小组角色演练](skills/coach-digital-core-interviews/references/group-rehearsal.md)包含一场信息分散在财务与一线手中的练习，以及同题复测和跨行业重答的方法。
+- [工程经验如何影响商业决策](skills/coach-digital-core-interviews/references/engineering-judgment.md)训练如何核实竞争解释、识别一线采用障碍、区分交付与收益。候选人可在自己的对话中加入个人履历。
+- [练习规则](skills/coach-digital-core-interviews/references/practice.md)说明如何给可观察的回答做点评、改变练习和记录进度。[行为复测](evals/scenarios.md)可用于比较不同模型或后续版本。
+
+## 一段交互
+
+学员：“我们每月能少做 300 小时，按每小时 70 元就是省 2.1 万，能上吧？”
+
+教练（财务负责人）：“这笔工时里，有多少可以在下个月的外包账单上扣回来？”
+
+学员：“只有四成能兑现，系统每月要 9,000 元。”
+
+允许在这里暂停模拟并请教练复算。财务证据支持的月度净现金变化为 300 × 70 × 40% − 9,000 = −600 元。仍需为服务质量投资时，应把该目标及其验收条件提出来。
+
+## 如何迭代
+
+保留一次盲答、具体失误及一次修改，换行业或数字再测。欢迎贡献新材料，请写明候选人首先看到什么、什么事实可在追问后揭示、怎样核对单位或判断产品取舍。对面经给出原帖、年份及岗位；具体机构的评分权重需要可核查的一手来源。
+
+## 许可和资料使用
+
+项目原创内容采用 MIT 许可，见 [LICENSE](LICENSE)。外部文章、客户案例及各机构商标归各自权利人。本项目为独立准备材料。公开资料采用简述与链接；标记为原创练习的情境和数字均为虚构。
